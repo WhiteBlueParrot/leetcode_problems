@@ -27,7 +27,7 @@ def max_avg_subarray(nums: List[int], k: int) -> float:
 
 def max_avg_subarray_optimized(nums: List[int], k: int) -> float:
     n = len(nums)
-    sum_of_k_elems = sum(nums[0:k])
+    sum_of_k_elems = sum(nums[:k])
     max_avg = sum_of_k_elems / k
 
     for i in range(n - k):
