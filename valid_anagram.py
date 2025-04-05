@@ -11,7 +11,7 @@ Given two strings s and t, return true if t is an anagram of s, and false otherw
 # Input: s = "rat", t = "car"
 # Output: false
 
-def is_anagram(s: str, t: str) -> bool:
+def is_anagram(s: str, t: str) -> bool:  # my solution
     s_letters, t_letters = {}, {}
 
     for letter in s:
