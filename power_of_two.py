@@ -3,7 +3,6 @@ Given an integer n, return true if it is a power of two. Otherwise, return false
 
 An integer n is a power of two, if there exists an integer x such that n == 2x.
 """
-
 import math
 
 
@@ -11,7 +10,7 @@ import math
 
 # -2^31 <= n <= 2^31 - 1
 
-def is_power_of_two(n):
+def is_power_of_two(n: int) -> bool:
     if n == 1:
         return True
     elif n % 2 != 0 or n < 1:
@@ -19,14 +18,14 @@ def is_power_of_two(n):
     return is_power_of_two(n / 2)
 
 
-def is_power_of_two_range(n):
+def is_power_of_two_range(n: int) -> bool:
     for i in range(31):
         if 2 ** i == n:
             return True
     return False
 
 
-def is_power_of_two_while(n):
+def is_power_of_two_while(n: int) -> bool:
     if n == 0:
         return False
 
@@ -39,14 +38,14 @@ def is_power_of_two_while(n):
     return False
 
 
-def is_power_of_two_math(n):  # no loop or recursion solution
+def is_power_of_two_math(n: int) -> bool:  # no loop or recursion solution
     # In case of number multiple of 2 ceil and floor will always be equal
     if n == 0:
         return False
     return math.floor(math.log2(n)) == math.ceil(math.log2(n))
 
 
-def is_power_of_two_and(n):
+def is_power_of_two_and(n: int) -> bool:
     """
     And operation between multiple of 2 and next lower number will always give 0 and other wise it will never be 0.
 
