@@ -44,15 +44,12 @@ def reverse_words_manual(s: str) -> str:
                     word = ""
             else:
                 word += char
-
         if word:  # append the last word if exists
             words.append(word)
-
         return words
 
     words_list = custom_split(s)
     left, right = 0, len(words_list) - 1
-
     while left < right:
         words_list[left], words_list[right] = words_list[right], words_list[left]
         left += 1
